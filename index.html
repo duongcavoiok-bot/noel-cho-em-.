@@ -33,7 +33,7 @@
     <div id="lyrics-container"><span id="lyrics-text">...</span></div>
     <div id="webcam-wrapper"><div id="cam-overlay"><div class="rec-dot"></div><div class="rec-text">LIVE</div></div><div id="cam-stats">Initializing...</div><canvas id="webcam-canvas"></canvas></div>
     <video id="input_video" style="display:none"></video>
-    <audio id="bg-music" src="./audio.mp3" loop></audio>
+    <audio id="bg-music" src="./audio.MP3" loop></audio>
 
     <script type="module">
         import * as THREE from 'three';
@@ -251,7 +251,7 @@
 
         if (isGalleryMode && inspectedPhoto === null && carModel) { 
             polaroidGroup.rotation.y = carModel.rotation.y; 
-        }
+        
     } // Dòng 255: Đóng của function updatePolaroids
         function getClosestPolaroid() {
             if(!polaroidGroup) return null; let closest = null; let minDistance = Infinity;
