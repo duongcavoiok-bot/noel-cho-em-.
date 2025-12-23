@@ -247,10 +247,12 @@
                 if (isGalleryMode && p.material.opacity > 0.5) {
                     const off = p.userData.floatOffset; p.position.y = p.userData.targetPos.y + Math.sin(time * 0.8 + off) * 0.15; p.rotation.z = p.userData.targetRot.z + Math.sin(time * 0.7 + off) * 0.08;
                 }
-            });
-            if (isGalleryMode && inspectedPhoto === null) { polaroidGroup.rotation.y = carModel.rotation.y; polaroidGroup.rotation.x = carModel.rotation.x; }
-        }
+}); // Dòng 250: Đóng của forEach
 
+        if (isGalleryMode && inspectedPhoto === null && carModel) { 
+            polaroidGroup.rotation.y = carModel.rotation.y; 
+        }
+    } // Dòng 255: Đóng của function updatePolaroids
         function getClosestPolaroid() {
             if(!polaroidGroup) return null; let closest = null; let minDistance = Infinity;
             polaroidGroup.children.forEach(p => {
